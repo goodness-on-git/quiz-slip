@@ -1,0 +1,131 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.filters {
+  display: flex;
+  gap: 0.375rem;
+}
+
+.filter {
+  min-height: 2.5rem;
+  padding: 0 0.9rem;
+  border: 2px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter:hover {
+  background: var(--paper-sunken);
+}
+
+.filter[aria-pressed='true'] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.empty {
+  padding-block: 1rem;
+  color: var(--ink-soft);
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+  border-top: 2px solid var(--line);
+}
+
+.item {
+  border-bottom: 2px solid var(--line);
+}
+
+.summary {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.9rem 0.25rem;
+  cursor: pointer;
+}
+
+.summary:hover {
+  background: var(--paper-sunken);
+}
+
+.number {
+  flex: none;
+  min-width: 1.5rem;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.text {
+  flex: 1;
+  font-weight: 560;
+}
+
+/* Words carry the meaning. Colour and borders only back them up. */
+.tag {
+  flex: none;
+  padding: 0.1rem 0.5rem;
+  border: 2px solid currentColor;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+
+.correct {
+  color: var(--good);
+}
+
+.wrong {
+  color: var(--marker-text);
+}
+
+.skipped {
+  border-style: dashed;
+  color: var(--ink-soft);
+}
+
+.options {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0 0.25rem 1rem 2.75rem;
+  list-style: none;
+}
+
+.option {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+}
+
+.letter {
+  min-width: 1.25rem;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+.note {
+  padding: 0 0.4rem;
+  border-radius: 2px;
+  background: var(--highlight);
+  color: var(--on-highlight);
+  font-size: 0.875rem;
+  font-weight: 650;
+}

@@ -1,0 +1,71 @@
+.option {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.85rem 0.25rem;
+  border-bottom: 2px solid var(--line);
+  cursor: pointer;
+}
+
+.option:first-of-type {
+  border-top: 2px solid var(--line);
+}
+
+/* Hidden visually, still focusable and announced. */
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.letter {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  font-weight: 750;
+  line-height: 1;
+}
+
+.textWrap {
+  padding-top: 0.3rem;
+}
+
+.text {
+  font-size: 1.1875rem;
+  line-height: 1.45;
+}
+
+.option:hover .letter {
+  background: var(--paper-sunken);
+}
+
+.option:has(.input:checked) .letter {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* The highlighter swipe over the chosen answer. */
+.option:has(.input:checked) .text {
+  padding-inline: 0.3em;
+  margin-inline: -0.3em;
+  border-radius: 2px;
+  background: linear-gradient(
+    transparent 8%,
+    var(--highlight) 8% 92%,
+    transparent 92%
+  );
+  color: var(--on-highlight);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.option:has(.input:focus-visible) {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}

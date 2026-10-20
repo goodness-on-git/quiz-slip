@@ -1,0 +1,13 @@
+.title {
+  font-size: clamp(2rem, 1.2rem + 3vw, 3.5rem);
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  max-width: 16ch;
+}
+
+.text {
+  margin-block: 1rem 2rem;
+  max-width: var(--measure);
+  color: var(--ink-soft);
+}

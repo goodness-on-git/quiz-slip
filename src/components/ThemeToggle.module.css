@@ -1,0 +1,18 @@
+.toggle {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 2px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--ink);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+
+.toggle:hover {
+  background: var(--paper-sunken);
+}

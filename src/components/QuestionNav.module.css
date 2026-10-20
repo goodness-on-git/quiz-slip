@@ -1,0 +1,62 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  padding: 0;
+  list-style: none;
+}
+
+.dot {
+  display: grid;
+  place-items: center;
+  min-width: 2.25rem;
+  height: 2.25rem;
+  padding: 0 0.4rem;
+  border: 2px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--ink);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+
+.dot:hover {
+  background: var(--paper-sunken);
+}
+
+.answered {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.answered:hover {
+  background: var(--ink-soft);
+}
+
+.skipped {
+  border-color: var(--marker);
+  border-style: dashed;
+  color: var(--marker-text);
+}
+
+/* Declared last so the current question always stands out. */
+.current {
+  border-color: var(--ink);
+  border-style: solid;
+  background: var(--highlight);
+  color: var(--on-highlight);
+  box-shadow: 0 3px 0 var(--ink);
+}
+
+.current:hover {
+  background: var(--highlight);
+}
+
+.legend {
+  margin-top: 0.625rem;
+  color: var(--ink-soft);
+  font-size: 0.875rem;
+}

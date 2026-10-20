@@ -1,0 +1,121 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.count {
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.section {
+  max-width: 46rem;
+  margin-top: clamp(1.75rem, 4vw, 3rem);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--ink-soft);
+  font-size: 0.9375rem;
+}
+
+.difficulty {
+  text-transform: capitalize;
+}
+
+.question {
+  max-width: 30em;
+  font-size: clamp(1.5rem, 1rem + 2vw, 2.375rem);
+  font-weight: 680;
+  letter-spacing: -0.02em;
+  line-height: 1.22;
+  text-wrap: balance;
+}
+
+.options {
+  min-width: 0;
+  margin: clamp(1.5rem, 3vw, 2.25rem) 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  max-width: 46rem;
+  margin-top: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.actionsEnd {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hint {
+  margin-top: 1.25rem;
+  color: var(--ink-soft);
+  font-size: 0.9375rem;
+}
+
+/* No keyboard on touch screens, so the tip would only be noise. */
+@media (hover: none) {
+  .hint {
+    display: none;
+  }
+}
+
+.loadingText {
+  font-size: clamp(1.5rem, 1rem + 2vw, 2.25rem);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+/* A highlighter stroke sweeping across while we wait. */
+.loadingBar {
+  display: block;
+  width: min(18rem, 100%);
+  height: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--highlight), transparent)
+    0 0 / 200% 100%;
+  animation: sweep 1.2s linear infinite;
+}
+
+@keyframes sweep {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.errorTitle {
+  max-width: 18ch;
+  font-size: clamp(2rem, 1.2rem + 3vw, 3.5rem);
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.errorText {
+  max-width: var(--measure);
+  margin-block: 1rem 2rem;
+  color: var(--ink-soft);
+}
+
+.errorActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}

@@ -1,0 +1,55 @@
+/*
+ * Design tokens.
+ * The look is a pub-quiz answer slip: ink on cool paper, a marker-red accent,
+ * and a highlighter swipe over whatever you pick.
+ */
+:root {
+  color-scheme: light;
+
+  /* Surfaces */
+  --paper: #f1f5f4;
+  --paper-sunken: #e3eaea;
+
+  /* Text */
+  --ink: #16213e;
+  --ink-soft: #46536e;
+
+  /* Lines. --line is decorative; --line-strong is for controls (3:1 on paper). */
+  --line: #c3cfd0;
+  --line-strong: #6f7f94;
+
+  /* Accents */
+  --marker: #d7301f; /* fills and strokes */
+  --marker-text: #b3261a; /* red text, AA on paper */
+  --highlight: #ffe14d;
+  --on-highlight: #16213e;
+  --good: #0b7a5b;
+  --focus: #2457d6;
+
+  --font:
+    'Bricolage Grotesque Variable', ui-sans-serif, system-ui, -apple-system,
+    'Segoe UI', sans-serif;
+
+  --radius: 0.375rem;
+  --measure: 38rem;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --paper: #0f1527;
+  --paper-sunken: #172038;
+
+  --ink: #edf1fa;
+  --ink-soft: #a5b0c8;
+
+  --line: #2a3554;
+  --line-strong: #6a7897;
+
+  --marker: #ff6b5a;
+  --marker-text: #ff8a7a;
+  --highlight: #ffe14d;
+  --on-highlight: #16213e;
+  --good: #4cd6a4;
+  --focus: #8fb1ff;
+}
